@@ -85,6 +85,13 @@ Description text (optional)
   
 ![img2](https://github.com/user-attachments/assets/5eba5ab4-e8e3-4348-b619-e1961e175895)
 
+- Look at `/etc/hosts`, just user `root` can be write onto this file. So we need set `uid bit` for `writeip` and permisson write in `/etc/hosts`.
+
+![hosts](https://github.com/user-attachments/assets/4e4eaace-e2b0-494e-8c50-caa2ab183f12)
+![img](https://github.com/user-attachments/assets/33b5bb61-bb2d-42f6-bca7-df9bd0a65470)
+![writeip](https://github.com/user-attachments/assets/575290c0-0951-4c64-9c33-f9bc3303ff5a)
+
+
 - We need to find the address of `system`, `exit` and `preload` variable. Load `vuln.out` into `gdb` and find them.
   - Address value of system: `0xf7e50db0` will be inserted with format `\xb0\x0d\xe5\xf7`
   - Address value of exit: `0xf7e449e0` will be inserted with format `\xe0\x49\xe4\f7`
