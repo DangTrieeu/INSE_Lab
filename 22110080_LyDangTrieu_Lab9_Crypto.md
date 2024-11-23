@@ -66,7 +66,7 @@ d131dd02c5e6eec4693d9a0698aff95c2fcab50712467eab4004583eb8fb7f8955ad340609f4b302
 
 - Use the command `openssl dgst -md5` to display the `MD5 hashes` of each file.
 
-![img](./img/lab9/img42.png)
+![img](./img/Lab9/img42.png)
 
 - Because **the hashes are the same**, it `confirms` that **the binary files are the same**.
 
@@ -90,7 +90,7 @@ d131dd02c5e6eec4693d9a0698aff95c2fcab50712467eab4004583eb8fb7f8955ad340609f4b302
 
 - Use `Bless` to edit one bit
 
-![img](./img/lab9/bless.png)
+![img](./img/Lab9/bless.png)
 
 **d. Generate the hash value H2 for the modified file.**
 
