@@ -20,9 +20,9 @@ VZYHLOWCFZ QYEVRV CQ CZQVYNHV.
 
 - Use the tool [Dcode](https://www.dcode.fr/monoalphabetic-substitution) to find the `Alphabetic substitution ciphertext` and the `plaintext`.
 
-![](./img/Lab9/substitution.png)
+![img](./img/Lab9/substitution.png)
 
-![](./img/Lab9/plaintextA.png)
+![img](./img/Lab9/plaintextA.png)
 
 **3. Breaking the Vigenere Cipher**
 
@@ -34,7 +34,7 @@ TWT CMGWI ZJTWT AIOEAP XO QT DICJGP MN IWPMR ETCWOCH, SSUHTD, TAETCW, ACS PJFTRE
 
 - Use the tool [Dcode](https://www.dcode.fr/vigenere-cipher) to find the `Key` and the `plaintext`.
 
-![](./img/Lab9/plaintextB.png)
+![img](./img/Lab9/plaintextB.png)
 
 - The `Key` is `APPLE` and the `plaintext` is:
 
@@ -62,44 +62,44 @@ d131dd02c5e6eec4693d9a0698aff95c2fcab50712467eab4004583eb8fb7f8955ad340609f4b302
 
 - Convert each group of hex strings into a binary file.
 
-![](./img/Lab9/img41.png)
+![img](./img/Lab9/img41.png)
 
 - Use the command `openssl dgst -md5` to display the `MD5 hashes` of each file.
 
-![](./img/lab9/img42.png)
+![img](./img/lab9/img42.png)
 
 - Because **the hashes are the same**, it `confirms` that **the binary files are the same**.
 
-![](./img/Lab9/img43.png)
+![img](./img/Lab9/img43.png)
 
-- ??? wtf
+- ???
 
 # Lab B: Crypto-Lab: – Exploring Collision-Resistance, Pre-Image Resistance and MACs
 
 # Task 2:
 
-Create a text file of any length.
-b. Generate the hash value H1 for this file using a specific hash algorithm.
+**a. Create a text file of any length.**
+
+**b. Generate the hash value H1 for this file using a specific hash algorithm.**
 
 - Use `md5` to encrypt file
 
-![](./img/Lab9/e1.png)
+![img](./img/Lab9/e1.png)
 
-c. Flip one bit of the input file. You can achieve this modification using Bless.
+**c. Flip one bit of the input file. You can achieve this modification using Bless.**
 
 - Use `Bless` to edit one bit
 
-![](./img/lab9/bless.png)
+![img](./img/lab9/bless.png)
 
-d. Generate the hash value H2 for the modified file.
+**d. Generate the hash value H2 for the modified file.**
 
-- Hash file text again
+- Hash text file again
 
-![](./img/Lab9/e2.png)
+![img](./img/Lab9/e2.png)
 
-e. Observe whether H1 and H2 are similar or not. Write a short program to count how
-many bits are different between H1 and H2.
+**e. Observe whether H1 and H2 are similar or not. Write a short program to count how many bits are different between H1 and H2.**
 
-![](./img/Lab9/py.png)
+![img](./img/Lab9/py.png)
 
-![](./img/Lab9/result.png)
+![img](./img/Lab9/result.png)
