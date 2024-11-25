@@ -20,9 +20,9 @@ VZYHLOWCFZ QYEVRV CQ CZQVYNHV.
 
 - Use the tool [Dcode](https://www.dcode.fr/monoalphabetic-substitution) to find the `Alphabetic substitution ciphertext` and the `plaintext`.
 
-![img](./img/Lab9/substitution.png)
+![img](./img/substitution.png)
 
-![img](./img/Lab9/plaintextA.png)
+![img](./img/plaintextA.png)
 
 **3. Breaking the Vigenere Cipher**
 
