@@ -86,11 +86,11 @@ Encrypt the file with aes-256 cipher in CFB and OFB modes. How do you evaluate b
 
 - Step-by-step process:
 
-  1. Encrypt the IV using the secret key.
+  `1.` Encrypt the IV using the secret key.
 
-  2. XOR the output of step 1 with the plaintext to generate the ciphertext.
+  `2.` XOR the output of step 1 with the plaintext to generate the ciphertext.
 
-  3. Shift the ciphertext to become the input for the next step (shift feedback).
+  `3.` Shift the ciphertext to become the input for the next step (shift feedback).
 
 **2. Cipher Feedback Mode Decryption (CFB)**
 
@@ -100,11 +100,11 @@ Encrypt the file with aes-256 cipher in CFB and OFB modes. How do you evaluate b
 
 - Step-by-step process:
 
-  1. Encrypt the ciphertext (or IV for the first step) using the secret key.
+  `1.` Encrypt the ciphertext (or IV for the first step) using the secret key.
 
-  2. XOR the output of step 1 with the ciphertext to recover the plaintext.
+  `2.` XOR the output of step 1 with the ciphertext to recover the plaintext.
 
-  3. Shift the current ciphertext forward to process the next block.
+  `3.` Shift the current ciphertext forward to process the next block.
 
 **Output Feedback Mode (OFB)**
 
@@ -122,11 +122,11 @@ Encrypt the file with aes-256 cipher in CFB and OFB modes. How do you evaluate b
 
 - Step-by-step process:
 
-  1. Encrypt the IV using the secret key to generate a "keystream."
+  `1.` Encrypt the IV using the secret key to generate a "keystream."
 
-  2. XOR the keystream with the plaintext to generate the ciphertext.
+  `2.` XOR the keystream with the plaintext to generate the ciphertext.
 
-  3. Use the output of the block encryption as the input for the next encryption step.
+  `3.` Use the output of the block encryption as the input for the next encryption step.
 
 **2. OFB (Output Feedback Mode) Decryption**
 
@@ -136,11 +136,11 @@ Encrypt the file with aes-256 cipher in CFB and OFB modes. How do you evaluate b
 
 - Step-by-step process:
 
-  1. Start with the same IV as used during encryption and encrypt it to generate the keystream.
+  `1.` Start with the same IV as used during encryption and encrypt it to generate the keystream.
 
-  2. XOR the keystream with the ciphertext to recover the plaintext.
+  `2.` XOR the keystream with the ciphertext to recover the plaintext.
 
-  3. The output of the encryption algorithm continues to be used as the input for subsequent steps.
+  `3.` The output of the encryption algorithm continues to be used as the input for subsequent steps.
 
 **Encrypt the file with aes-256 cipher in CFB and OFB modes**
 
